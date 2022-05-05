@@ -50,8 +50,28 @@ namespace TestProject1
             FindMaximum max = new FindMaximum();
             float actual = max.FindMaxFloat(1.2f, 6.7f, 3.6f);
             Assert.AreEqual(actual, 6.7f);
-
-
         }
+        [TestMethod]
+        public void TC7()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Apple", "Peach", "Banana");
+            Assert.AreEqual(actual, "Banana");
+        }
+        [TestMethod]
+        public void TC8()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Banana", "Apple", "Peach");
+            Assert.AreEqual(actual, "Banana");
+        }
+        [TestMethod]
+        public void TC9()
+        {
+            FindMaximum max = new FindMaximum();
+            string actual = max.FindMaxString("Apple", "Banana", "Peach");
+            Assert.AreEqual(actual, "Banana");
+        }
+
     }
 }
