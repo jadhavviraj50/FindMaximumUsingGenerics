@@ -30,6 +30,28 @@ namespace TestProject1
             Assert.AreEqual(actual, 3);
         }
 
+        [TestMethod]
+        public void TC4()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(1.2f, 3.6f, 6.7f);
+            Assert.AreEqual(actual, 6.7f);
+        }
+        [TestMethod]
+        public void TC5()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(6.7f, 1.2f, 3.6f);
+            Assert.AreEqual(actual, 6.7f);
+        }
+        [TestMethod]
+        public void TC6()
+        {
+            FindMaximum max = new FindMaximum();
+            float actual = max.FindMaxFloat(1.2f, 6.7f, 3.6f);
+            Assert.AreEqual(actual, 6.7f);
 
+
+        }
     }
 }

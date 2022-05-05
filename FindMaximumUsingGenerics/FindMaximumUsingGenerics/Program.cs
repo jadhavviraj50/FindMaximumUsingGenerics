@@ -18,6 +18,15 @@ namespace TestMaximum
             Console.WriteLine("Max number of 3 variables i.e. 1, 3, 2 ");
             test.FindMaxInteger(1, 3, 2);
 
+            Console.WriteLine("Max number of 3 variables i.e. 1.2f, 3.6f, 6.7f ");
+            test.FindMaxFloat(1.2f, 3.6f, 6.7f);
+
+            Console.WriteLine("Max number of 3 variables i.e. 6.7f, 1.2f, 3.6f ");
+            test.FindMaxFloat(6.7f, 1.2f, 3.6f);
+
+            Console.WriteLine("Max number of 3 variables i.e. 1.2f, 6.7f, 3.6f ");
+            test.FindMaxFloat(1.2f, 6.7f, 3.6f);
+
 
 
         }
