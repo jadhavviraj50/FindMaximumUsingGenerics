@@ -6,71 +6,93 @@ namespace TestProject1
     [TestClass]
     public class UnitTest1
     {
+
+        //[TestMethod]
+        //public void TC1()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    int actual = max.FindMaxInteger(1, 2, 3);
+        //    Assert.AreEqual(actual, 3);
+        //}
+
+        //[TestMethod]
+        //public void TC2()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    int actual = max.FindMaxInteger(3, 1, 2);
+        //    Assert.AreEqual(actual, 3);
+        //}
+
+        //[TestMethod]
+        //public void TC3()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    int actual = max.FindMaxInteger(1, 3, 2);
+        //    Assert.AreEqual(actual, 3);
+        //}
+
+        //[TestMethod]
+        //public void TC4()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    float actual = max.FindMaxFloat(1.2f, 3.6f, 6.7f);
+        //    Assert.AreEqual(actual, 6.7f);
+        //}
+        //[TestMethod]
+        //public void TC5()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    float actual = max.FindMaxFloat(6.7f, 1.2f, 3.6f);
+        //    Assert.AreEqual(actual, 6.7f);
+        //}
+        //[TestMethod]
+        //public void TC6()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    float actual = max.FindMaxFloat(1.2f, 6.7f, 3.6f);
+        //    Assert.AreEqual(actual, 6.7f);
+        //}
+        //[TestMethod]
+        //public void TC7()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    string actual = max.FindMaxString("Apple", "Peach", "Banana");
+        //    Assert.AreEqual(actual, "Banana");
+        //}
+        //[TestMethod]
+        //public void TC8()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    string actual = max.FindMaxString("Banana", "Apple", "Peach");
+        //    Assert.AreEqual(actual, "Banana");
+        //}
+        //[TestMethod]
+        //public void TC9()
+        //{
+        //    FindMaximum max = new FindMaximum();
+        //    string actual = max.FindMaxString("Apple", "Banana", "Peach");
+        //    Assert.AreEqual(actual, "Banana");
+        //}
         [TestMethod]
-        public void TC1()
+        public void UC10()
         {
-            FindMaximum max = new FindMaximum();
-            int actual = max.FindMaxInteger(1, 2, 3);
+            FindMaximum<int> max = new FindMaximum<int>(1, 2, 3);
+            int actual = MaxValueGeneric();
             Assert.AreEqual(actual, 3);
         }
-
         [TestMethod]
-        public void TC2()
+        public void UC11()
         {
-            FindMaximum max = new FindMaximum();
-            int actual = max.FindMaxInteger(3, 1, 2);
-            Assert.AreEqual(actual, 3);
-        }
-
-        [TestMethod]
-        public void TC3()
-        {
-            FindMaximum max = new FindMaximum();
-            int actual = max.FindMaxInteger(1, 3, 2);
-            Assert.AreEqual(actual, 3);
-        }
-
-        [TestMethod]
-        public void TC4()
-        {
-            FindMaximum max = new FindMaximum();
-            float actual = max.FindMaxFloat(1.2f, 3.6f, 6.7f);
-            Assert.AreEqual(actual, 6.7f);
+            FindMaximum<double> max = new FindMaximum<double>(2.3, 4.5, 6.7);
+            double actual = MaxValueGeneric();
+            Assert.AreEqual(actual, 6.7);
         }
         [TestMethod]
-        public void TC5()
+        public void UC12()
         {
-            FindMaximum max = new FindMaximum();
-            float actual = max.FindMaxFloat(6.7f, 1.2f, 3.6f);
-            Assert.AreEqual(actual, 6.7f);
-        }
-        [TestMethod]
-        public void TC6()
-        {
-            FindMaximum max = new FindMaximum();
-            float actual = max.FindMaxFloat(1.2f, 6.7f, 3.6f);
-            Assert.AreEqual(actual, 6.7f);
-        }
-        [TestMethod]
-        public void TC7()
-        {
-            FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Apple", "Peach", "Banana");
-            Assert.AreEqual(actual, "Banana");
-        }
-        [TestMethod]
-        public void TC8()
-        {
-            FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Banana", "Apple", "Peach");
-            Assert.AreEqual(actual, "Banana");
-        }
-        [TestMethod]
-        public void TC9()
-        {
-            FindMaximum max = new FindMaximum();
-            string actual = max.FindMaxString("Apple", "Banana", "Peach");
-            Assert.AreEqual(actual, "Banana");
+            FindMaximum<string> max = new FindMaximum<string>("Apple", "Peach", "Banana");
+            string actual = max.MaxValueGeneric();
+            Assert.AreEqual(actual, "Peach");
         }
 
     }
