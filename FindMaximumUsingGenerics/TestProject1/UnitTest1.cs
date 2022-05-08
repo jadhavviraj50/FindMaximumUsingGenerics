@@ -73,27 +73,7 @@ namespace TestProject1
         //    string actual = max.FindMaxString("Apple", "Banana", "Peach");
         //    Assert.AreEqual(actual, "Banana");
         //}
-        [TestMethod]
-        public void UC10()
-        {
-            FindMaximum<int> max = new FindMaximum<int>(1, 2, 3);
-            int actual = MaxValueGeneric();
-            Assert.AreEqual(actual, 3);
-        }
-        [TestMethod]
-        public void UC11()
-        {
-            FindMaximum<double> max = new FindMaximum<double>(2.3, 4.5, 6.7);
-            double actual = MaxValueGeneric();
-            Assert.AreEqual(actual, 6.7);
-        }
-        [TestMethod]
-        public void UC12()
-        {
-            FindMaximum<string> max = new FindMaximum<string>("Apple", "Peach", "Banana");
-            string actual = max.MaxValueGeneric();
-            Assert.AreEqual(actual, "Peach");
-        }
+       
 
     }
 }
